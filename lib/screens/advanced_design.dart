@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:designs/widgets/background.dart';
+import '../widgets/background.dart';
+import '../widgets/body.dart';
+import '../widgets/bottom_bar.dart';
 
 class AdvancedDesign extends StatelessWidget {
   @override
@@ -9,8 +11,10 @@ class AdvancedDesign extends StatelessWidget {
       body: Stack(
         children: [
           Background(),
+          Body(),
         ],
       ),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

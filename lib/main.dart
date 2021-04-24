@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'screens/basic_design.dart';
 import 'screens/scroll_design.dart';
@@ -9,9 +10,13 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // Light notification area
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
+
     return MaterialApp(
+        theme: ThemeData.dark(),
         debugShowCheckedModeBanner: false,
-        title: 'Material App',
+        title: 'Designs',
         initialRoute: 'advanced_design',
         routes: {
           'basic_design': (_) => BasicDesign(),
